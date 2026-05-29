@@ -1,0 +1,65 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<main class="main">
+  <div class="container">
+
+  <h1>Angular Modern To-Do</h1>
+
+  <div class="input-area">
+
+    <input
+      type="text"
+      [ngModel]="novaTarefa()"
+      (ngModelChange)="novaTarefa.set($event)"
+      placeholder="Digite uma tarefa"
+      (keyup.enter)="adicionarTarefa()"
+    >
+
+    <button (click)="adicionarTarefa()">
+      Adicionar
+    </button>
+
+  </div>
+
+  <app-filters
+
+    [filtroAtual]="filtroAtual()"
+
+    (mudarFiltro)="
+      filtroAtual.set($event)
+    "
+
+  ></app-filters>
+
+  <app-task-list
+
+    [tarefas]="tarefasFiltradas()"
+
+    (remover)="removerTarefa($event)"
+
+    (toggle)="toggleConcluida($event)"
+
+    (editar)="editarTarefa($event)"
+
+    (salvar)="salvarEdicao($event)"
+
+  ></app-task-list>
+
+</div>
+</main>
+  
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

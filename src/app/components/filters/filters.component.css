@@ -1,0 +1,13 @@
+.filters {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.filters button {
+
+  flex: 1;
+}
