@@ -1,0 +1,19 @@
+<ul>
+
+  <app-task-item
+
+    *ngFor="let tarefa of tarefas"
+
+    [tarefa]="tarefa"
+
+    (remover)="remover.emit($event)"
+
+    (toggle)="toggle.emit($event)"
+
+    (editar)="editar.emit($event)"
+
+    (salvar)="salvar.emit($event)"
+
+  ></app-task-item>
+
+</ul>

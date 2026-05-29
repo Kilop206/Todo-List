@@ -1,0 +1,21 @@
+<div class="filters">
+
+  <button
+    (click)="mudarFiltro.emit('todas')"
+  >
+    Todas
+  </button>
+
+  <button
+    (click)="mudarFiltro.emit('pendentes')"
+  >
+    Pendentes
+  </button>
+
+  <button
+    (click)="mudarFiltro.emit('concluidas')"
+  >
+    Concluídas
+  </button>
+
+</div>

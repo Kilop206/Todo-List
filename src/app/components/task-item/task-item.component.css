@@ -1,0 +1,56 @@
+li {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px;
+
+  background: #f5f5f5;
+
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+}
+
+.task-content {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex: 1;
+}
+
+.task-text {
+
+  flex: 1;
+}
+
+.concluida {
+
+  text-decoration: line-through;
+
+  opacity: 0.6;
+}
+
+.actions {
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.edit-btn {
+
+  background: #f9a825;
+}
+
+.save-btn {
+
+  background: #388e3c;
+}

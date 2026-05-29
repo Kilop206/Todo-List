@@ -1,0 +1,58 @@
+<li>
+
+  <div class="task-content">
+
+    <input
+      type="checkbox"
+      [checked]="tarefa.concluida"
+      (change)="toggle.emit(tarefa.id)"
+    >
+
+    <div class="task-text">
+
+      <span
+        *ngIf="!tarefa.editando"
+        [class.concluida]="tarefa.concluida"
+      >
+        {{ tarefa.texto }}
+      </span>
+
+      <input
+        *ngIf="tarefa.editando"
+        type="text"
+        [(ngModel)]="tarefa.texto"
+        (keyup.enter)="salvar.emit(tarefa.id)"
+      >
+
+    </div>
+
+  </div>
+
+  <div class="actions">
+
+    <button
+      *ngIf="!tarefa.editando"
+      class="edit-btn"
+      (click)="editar.emit(tarefa.id)"
+    >
+      Editar
+    </button>
+
+    <button
+      *ngIf="tarefa.editando"
+      class="save-btn"
+      (click)="salvar.emit(tarefa.id)"
+    >
+      Salvar
+    </button>
+
+    <button
+      class="delete-btn"
+      (click)="remover.emit(tarefa.id)"
+    >
+      X
+    </button>
+
+  </div>
+
+</li>
